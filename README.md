@@ -35,7 +35,7 @@ LLM_PROVIDERS = {
 
 ### Factory Usage
 ```python
-from providers import get_llm_provider, LLMProviderConfig
+from model_providers import get_llm_provider, LLMProviderConfig
 
 # Use environment config
 resolved = get_llm_provider()
@@ -81,7 +81,7 @@ EMBEDDING_PROVIDERS = {
 
 ### Factory Usage
 ```python
-from providers import get_embedding_provider
+from model_providers import get_embedding_provider
 
 resolved = get_embedding_provider()
 embeddings = resolved.provider.embed(["hello", "world"])
@@ -189,4 +189,4 @@ export LLM_MODEL=model-name
 If you were using the old decorator pattern:
 - `@register_llm_provider("name")` → Just add class to `LLM_PROVIDERS` dict
 - `@register_embedding_provider("name")` → Add to `EMBEDDING_PROVIDERS` dict
-- Imports still work the same: `from providers import get_llm_provider`
+- Imports still work the same: `from model_providers import get_llm_provider`
