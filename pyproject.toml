@@ -1,0 +1,27 @@
+[project]
+name = "model-providers"
+version = "0.0.1"
+description = "pydantic ai providers and models"
+readme = "README.md"
+authors = [
+    { name = "valiantlynx", email = "gormerykombo@gmail.com" },
+    { name = "Mythrantic" }
+]
+requires-python = ">=3.13"
+license = { text = "MIT License" }
+dependencies = [
+    "azure-identity>=1.25.1",
+    "azure-keyvault>=4.2.0",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "openai>=2.7.1",
+    "pydantic-ai>=1.11.0",
+    "python-dotenv>=1.2.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/model_providers"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
