@@ -1,13 +1,13 @@
 [project]
 name = "model-providers"
-version = "0.0.1"
+version = "0.0.2"
 description = "pydantic ai providers and models"
 readme = "README.md"
 authors = [
     { name = "valiantlynx", email = "gormerykombo@gmail.com" },
     { name = "Mythrantic" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 license = { text = "MIT License" }
 dependencies = [
     "azure-identity>=1.25.1",
