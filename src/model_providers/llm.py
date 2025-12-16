@@ -125,7 +125,7 @@ class OllamaProvider(BaseLLMProvider):
 
 
 def _fetch_azure_api_key_from_keyvault() -> Optional[str]:
-    keyvault_url = os.getenv("AZURE_OPENAI_KEYVAULT_URL", "https://kv-dev-localnews-ai.vault.azure.net/")
+    keyvault_url = os.getenv("AZURE_OPENAI_KEYVAULT_URL", "https://kv-dev-somekeyvault.vault.azure.net/")
     secret_name = os.getenv("AZURE_OPENAI_SECRET_NAME", "azure-openai-api-key")
     if not keyvault_url or not DefaultAzureCredential or not SecretClient:
         return None
