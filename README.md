@@ -1,7 +1,17 @@
 # Provider Architecture (Simple OOP)
 
 ## Overview
-Clean inheritance-based provider system with no decorators. Just straightforward classes and a registry dict.
+Clean inheritance-based LLM and EMbedding models provider system.
+
+## Installation
+
+```python
+# From the machine-core directory
+uv add git+https://github.com/samletnorge/model-providers.git
+
+# Or with
+uv sync
+```
 
 ## LLM Providers
 
@@ -184,9 +194,5 @@ export LLM_MODEL=model-name
 5. **Clear Dependencies**: Import tree is straightforward
 6. **IDE Friendly**: Autocomplete and navigation work perfectly
 
-## Migration Notes
-
-If you were using the old decorator pattern:
-- `@register_llm_provider("name")` → Just add class to `LLM_PROVIDERS` dict
-- `@register_embedding_provider("name")` → Add to `EMBEDDING_PROVIDERS` dict
-- Imports still work the same: `from model_providers import get_llm_provider`
+## License
+[LICENSE](./LICENSE.md)
