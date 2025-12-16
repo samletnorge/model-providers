@@ -155,7 +155,7 @@ class AzureEmbeddingProvider(BaseEmbeddingProvider):
             return None
 
     def embed(self, texts: List[str]) -> List[List[float]]:
-        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://openai-new-version.openai.azure.com/")
+        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://your-endpoint.openai.azure.com/")
         api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-08-01-preview")
         deployment = os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT", self.cfg.model_name)
         
