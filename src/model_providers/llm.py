@@ -149,7 +149,7 @@ class AzureProvider(BaseLLMProvider):
             raise RuntimeError(
                 "AzureProvider not available; upgrade pydantic-ai for Azure support."
             )
-        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://openai-new-version.openai.azure.com/")
+        endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://your-endpoint.openai.azure.com/")
         if not endpoint:
             raise RuntimeError("Missing AZURE_OPENAI_ENDPOINT for Azure backend.")
         api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-08-01-preview")
