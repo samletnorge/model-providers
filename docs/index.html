@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Documentation</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 2rem; line-height: 1.6;}
+        h1 {border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;}
+        pre {background:#f4f4f4; padding:1rem; overflow-x:auto;}
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+    <p>This documentation page provides an overview of the project, its architecture, and how to use the provider factories.</p>
+    <h2>Provider Factory Usage</h2>
+    <p>The project exposes a simple abstraction for LLM and embedding providers via the <code>model_providers</code> package.</p>
+    <pre><code>from model_providers import get_llm_provider, get_embedding_provider
+
+llm_cfg = get_llm_provider()
+llm_cfg.provider.send_message(...)
+
+emb_cfg = get_embedding_provider()
+emb_cfg.provider.embed(["text to embed"])</code></pre>
+    <h2>Environment Configuration</h2>
+    <p>Set the required environment variables to change providers, models, and credentials. See the README for details.</p>
+</body>
+</html>
